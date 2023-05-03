@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="views/app.css">
+    <title>connexion</title>
+</head>
+<body>
+    <div>
+        <h1>Connexion</h1>
+        <form action="/verif" method="post">
+            <div class="formGroup">
+                <label for="user_nom">nom</label>
+                <input type="text" name="nom"  required/>
+            </div>
+            <div class="formGroup">
+                <label for="user_password">Mot de passe</label>
+                <input type="text" name="password" required/>
+            </div>
+            <div class="formGroup">
+                <button type="submit" class="button">Connexion</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
+
+
