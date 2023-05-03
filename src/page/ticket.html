@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8" />
+    
+    <link rel="stylesheet" href="app.css">
+    <title>liste des ticket : </title>
+</head>
+<body>
+    <table>
+        <ul>
+            <li>
+                Titre : {{Ticket.titre}}
+            </li>
+            <li>
+                Description : {{Ticket.description}}
+            </li>
+            <li>
+                <input name="update-ticket" type="button" form="/update-ticket">
+                <input name ="delete-ticket" type="button" form="/delete-ticket">
+            </li>
+        </ul>
+
+    </table>
+</body>
+</html>

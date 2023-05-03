@@ -37,6 +37,53 @@ app.post('/verif', async function (req, res) {
 });
 
 
+app.post('/add-ticket', async function (req, res) {
+
+
+   await prisma.ticket.create({
+     data: {
+
+        titre: req.body.titre,
+        description: req.body.description,
+        etat: 1,
+        iduser: this.user.id
+         
+     }
+   })
+
+ });
+
+ app.post('/update-ticket', async function (req, res) {
+
+
+   await prisma.ticket.update({
+     data: {
+
+        titre: req.body.titre,
+        description: req.body.description,
+        etat: 1,
+        iduser: this.user.id
+         
+     }
+   })
+
+ });
+
+ app.post('/delete-ticket', async function (req, res) {
+
+
+   await prisma.ticket.delete({
+      where : {
+         etat: 0,
+         
+     }
+   })
+
+ });
+
+
+
+
 app.post('/submit-user', async function (req, res) {
 
 
@@ -100,5 +147,4 @@ app.delete('/delete', function (req, res) {
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
-})
-
+});
